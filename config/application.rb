@@ -11,6 +11,8 @@ module App
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # This is necessary to ensure that your changes are reloaded correctly.
+    config.reload_classes_only_on_change = false
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

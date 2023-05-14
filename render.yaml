@@ -1,0 +1,18 @@
+databases:
+  - name: deposit_app
+    databaseName: deposit_app_uh3m
+    user: deposit_app_uh3m_user
+
+services:
+  - type: web
+    name: deposit_app
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: deposit_app_uh3m
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

@@ -14,8 +14,6 @@ module.exports = {
       },
       colors: {
         purple: "#693697",
-        green: "#4EA64E",
-        borderColor: "#5BB75B"
       }
     },
   },

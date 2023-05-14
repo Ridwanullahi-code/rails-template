@@ -25,7 +25,7 @@
 
 # 📖 Book App <a name="about-project"></a>
 
-**Book App** is a Ruby on Rails web-based platform that allows book lovers to discover new books, post, and comment on book. The application offers a variety of features to help users find and review books, as well as socialize with other readers.
+**Application** is a Ruby on Rails web-based platform that allows book lovers to discover new books, post, and comment on book. The application offers a variety of features to help users find and review books, as well as socialize with other readers.
 
 ## 🛠 Built With <a name="built-with"></a>
 

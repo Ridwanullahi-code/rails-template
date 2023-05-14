@@ -32,7 +32,7 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Server</summary>
+  <summary>Servers</summary>
   <ul>
     <li><a href="https://expressjs.com/">Ruby</a></li>
   </ul>

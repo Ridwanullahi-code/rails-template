@@ -1,6 +1,6 @@
 <% resource = User.new %> <!-- Define the Devise resource variable -->
 <% resource_name = :user %> <!-- Define the Devise resource name -->
-<header class="p-3 w-full">
+<header class="bg-purple p-3 w-full">
 	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 		<div class="flex gap-2">
 			<div class="w-2/5">

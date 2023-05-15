@@ -14,7 +14,8 @@ module App
     # This is necessary to ensure that your changes are reloaded correctly.
     config.reload_classes_only_on_change = false
     # Configuration for the application, engines, and railties goes here.
-    #
+    
+    config.assets.precompile += %w( application.tailwindcss.css )
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #

@@ -1,18 +1,18 @@
 databases:
-  - name: deposit_app
-    databaseName: deposit_app
+  - name: deposit_app-q63j
+    databaseName: deposit_app_qe3i
     user: deposit_app_user
 
 services:
   - type: web
-    name: deposit_app
+    name: deposit_app-q63j
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: deposit_app
+          name: deposit_app-q63j
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false

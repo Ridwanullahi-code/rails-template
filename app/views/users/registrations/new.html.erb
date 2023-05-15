@@ -3,19 +3,7 @@
     <div class="w-full max-w-md bg-white p-8">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-      <div class="relative flex items-center mt-8">
-        <span class="absolute">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-          </svg>
-        </span>
-        <%= f.text_field :firstname, autofocus: true, autocomplete: "firstname", placeholder: "First Name",
-        class: "block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300
-        dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none
-        focus:ring focus:ring-opacity-40" %>
-      </div>
+      
 
       <div class="relative flex items-center mt-2">
         <span class="absolute">

@@ -13,9 +13,29 @@
 
     <body>
     <main>
-      <p><%= notice%></p>
-      <p><%= alert %></p>
+      <p class="message"><%= notice%></p>
+      <p class="message"><%= alert %></p>
       <%= yield %>
     </main>
+
+    <script>
+      document.querySelectorAll('.message')
+      .forEach(el => {
+      setTimeout(() => {
+      el.style.display = 'none'
+      }, 3000)
+      })
+
+      document.querySelectorAll('.section')
+      .forEach(el => {
+        el.addEventListener('click', (e) => {
+        const answer = e.currentTarget.children[2]
+        if (e.target.classList.contains('question')){
+          answer.classList.toggle('hidden');
+        }
+        })
+      })
+      
+    </script>
   </body>
 </html>

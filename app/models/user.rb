@@ -17,4 +17,7 @@ class User < ApplicationRecord
   validates :balance, presence: true, numericality: { allow_decimal: true, greater_than: 0 }, if: -> { role == 'user' }
   validates :firstname, :lastname, :username, :phone_number, presence: true, if: -> { role == 'user' }
   validates :username, uniqueness: true, if: -> { role == 'user' }
+
+
+  
 end

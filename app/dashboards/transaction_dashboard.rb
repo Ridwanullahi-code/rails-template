@@ -10,10 +10,13 @@ class TransactionDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     amount: Field::String.with_options(searchable: false),
-    transaction_type: Field::String,
+    unique_id: Field::String,
     user: Field::BelongsTo,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime
+    updated_at: Field::DateTime,
+    transaction_type: Field::Select.with_options(
+      collection: %w[deposit withdraw] 
+    ),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -22,16 +25,16 @@ class TransactionDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    id
-    amount
-    transaction_type
     user
+    transaction_type
+    amount
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
+    unique_id
     amount
     transaction_type
     user
@@ -43,6 +46,7 @@ class TransactionDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
+    unique_id
     amount
     transaction_type
     user

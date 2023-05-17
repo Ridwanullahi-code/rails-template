@@ -1,9 +1,6 @@
 require 'administrate/base_dashboard'
 
 class UserDashboard < Administrate::BaseDashboard
-
- 
-
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -23,7 +20,7 @@ class UserDashboard < Administrate::BaseDashboard
     reset_password_token: Field::String,
     transactions: Field::HasMany,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -78,5 +75,4 @@ class UserDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
   #
-
 end

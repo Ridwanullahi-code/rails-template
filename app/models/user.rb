@@ -9,15 +9,22 @@ class User < ApplicationRecord
   devise :confirmable if :role == 'user'
 
   has_many :transactions, foreign_key: 'user_id', dependent: :destroy
-  attribute :balance, :decimal, default: 200
-  attribute :bonus, :decimal, default: 200
   attribute :role, :string, default: 'user'
   attribute :unique_id, :string, default: SecureRandom.hex(3)
-
   validates :balance, presence: true, numericality: { allow_decimal: true, greater_than: 0 }, if: -> { role == 'user' }
   validates :firstname, :lastname, :username, :phone_number, presence: true, if: -> { role == 'user' }
   validates :username, uniqueness: true, if: -> { role == 'user' }
 
+  after_create :assign_referral_link, if: -> { role == 'user' }
 
-  
+  def assign_referral_link
+    self.referral_link = generate_referral_link
+    save
+  end
+
+  private
+
+  def generate_referral_link
+    Rails.application.routes.url_helpers.new_user_registration_url(ref: unique_id, host: 'localhost:3000')
+  end
 end

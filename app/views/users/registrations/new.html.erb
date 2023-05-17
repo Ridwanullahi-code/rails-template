@@ -1,6 +1,7 @@
-<section class="bg-purple dark:bg-gray-900">
+<section class="bg-purple">
   <div class="container flex items-center justify-center min-h-screen px-6 mx-auto">
     <div class="w-full max-w-md bg-white p-8">
+      <%= hidden_field_tag :unique_id, params[:ref] %>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="relative flex items-center mt-8">

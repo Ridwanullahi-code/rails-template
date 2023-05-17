@@ -15,8 +15,8 @@ class TransactionDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     transaction_type: Field::Select.with_options(
-      collection: %w[deposit withdraw] 
-    ),
+      collection: %w[deposit withdraw]
+    )
   }.freeze
 
   # COLLECTION_ATTRIBUTES

@@ -1,10 +1,12 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
-import "controllers"
+import "./controllers";
 
 const harmbugger = document.querySelector('.harmbugger')
 const menu = document.querySelector('.menu')
 
 harmbugger.addEventListener('click', () => {
-  menu.classList.toggle('hidden')
+menu.classList.toggle('hidden')
 })
+
+

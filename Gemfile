@@ -76,9 +76,11 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'factory_bot_rails', '~> 6.2'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
 
-
+gem 'cssbundling-rails'
+gem 'jsbundling-rails'
 gem 'tailwindcss-rails', '~> 2.0'

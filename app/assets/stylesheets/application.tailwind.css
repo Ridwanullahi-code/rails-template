@@ -11,3 +11,9 @@
 }
 
 */
+.navigation__logout {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding: 1rem 0;
+}

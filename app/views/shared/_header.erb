@@ -13,9 +13,11 @@
 				<p class="text-white text-[14px]">Input correct passowrd</p>
 			</div>
 			<div class="flex flex-col gap-2 w-1/4">
-			<%= f.submit "Login" , class:"w-full text-white bg-Green p-2 cursor-pointer rounded-md flex justify-center items-center border-3 border-green-500 hover:bg-green-400 active:bg-green-700 hover:bg-border-400 active:border-700"%>
-			
-				<%= link_to "Register", new_user_registration_path, class:"w-full text-white bg-Green p-2 cursor-pointer rounded-md flex justify-center items-center border-3 border-Green hover:bg-hoverGreen active:bg-activeGreen hover:border-hoverGreen active:border-activeGreen" %>
+				<span class="w-full text-white p-2 cursor-pointer rounded-md flex justify-center items-center bg-green-500 border-3 border-green-500 hover:bg-green-600 hover:border-green-600 active:bg-green-600 active:border-green-600">
+					<input type="submit" value="Login" >
+				</span>
+				
+				<%= link_to "Register", new_user_registration_path , class:"w-full text-white p-2 cursor-pointer rounded-md flex justify-center items-center bg-green-500 border-3 border-green-500 hover:bg-green-600 hover:border-green-600 active:bg-green-600 active:border-green-600"%>
 			</div>
 		</div>
 	  <%end%>

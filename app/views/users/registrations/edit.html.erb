@@ -1,7 +1,7 @@
 <section class="bg-purple dark:bg-gray-900">
   <div class="container flex items-center justify-center min-h-screen px-6 mx-auto">
-    <div class="w-full max-w-md bg-white p-8">
-      <h1 class="text-center">Edit <%= resource_name.to_s.humanize %> Profile</h1>
+    <div class="w-full max-w-md bg-white p-8 flex flex-col gap-4">
+      <h1 class="text-center font-semibold">Edit <%= resource_name.to_s.humanize %> Profile</h1>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -19,7 +19,7 @@
       </div>
 
 
-      <div class="relative flex items-center mt-2">
+      <div class="relative flex items-center mt-3">
         <span class="absolute">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500" fill="none"
             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -32,7 +32,7 @@
           class: "block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" %>
       </div>
 
-      <div class="relative flex items-center mt-2">
+      <div class="relative flex items-center mt-3">
         <span class="absolute">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500" fill="none"
             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -41,13 +41,16 @@
           </svg>
         </span>
 
-        <%= f.password_field :current_password, autocomplete: "current-password", 
+        <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "Current Password", 
           class: "block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" %>
       </div>
 
-      <div class="mt-6">
-        <%= f.submit "Update",
-          class:"w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"%>
+      <div class="my-6">
+        <span class="w-full py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors
+          duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring
+          focus:ring-blue-300 focus:ring-opacity-50">
+           <%= f.submit "Update", class: "w-full" %>
+        </span>
       </div>
 
       <h3>Cancel my account</h3>

@@ -14,19 +14,23 @@
 				<div class="flex flex-col md:flex-row w-full gap-3">
 					<input type="email" placeholder="Email Address"
 						class="rounded-md outline-none border border-gray-200 p-2 flex-1 " />
-					<button type="submit"
-						class="rounded-md flex text-white font-bold bg-blue-600 hover:opacity-90 active:bg-blue-900 w-full md:w-24 justify-center items-center p-3">
-						Send
-					</button>
+						<span
+							class="rounded-md flex text-white font-bold bg-blue-600 hover:opacity-90 active:bg-blue-900 w-full md:w-24
+							justify-center items-center p-3">
+							<button type="submit">
+								Send
+							</button>
+						</span>
 				</div>
 				<hr />
 				<div class="flex flex-col md:flex-row justify-center items-center gap-3">
 					<div class="border border-gray-200 rounded-md w-full flex space-between">
 						<input class="flex-1 p-2 outline-none referral-link" readOnly value="<%= @user.referral_link %>" />
-						<button type="button" class="p-3 bg-gray-200  border border-gray-200 copy-button"
-						onclick="handleCopyClick()">
-						Copy Link
-						</button>
+						<span class="p-3 bg-gray-200  border border-gray-200 hover:bg-gray-300 hover:border-gray-300 active:bg-gray-400 active:border-gray-400 copy-button">
+							<button type="button" onclick="handleCopyClick()">
+								Copy Link
+							</button>
+						</span>
 					</div>
 				</div>
 			</form>

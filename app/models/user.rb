@@ -26,7 +26,7 @@ class User < ApplicationRecord
   private
 
   def generate_referral_link
-    Rails.application.routes.url_helpers.new_user_registration_url(ref: unique_id, host: 'localhost:3000')
+    Rails.application.routes.url_helpers.new_user_registration_url(ref: unique_id, host: 'https://deposit-app.onrender.com')
   end
 
 end

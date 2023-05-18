@@ -13,8 +13,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
        colors: {
-        purple: "#693697",
-        green: "#4EA64E",
+        purple: "#693697"
       }
     },
   },

@@ -16,8 +16,9 @@
 					</p>
 				</li>
 				<li class="w-full hover:bg-gray-600 active:bg-gray-700 md:active:bg-transparent md:hover:bg-transparent text-center duration-75 rounded-md">
-					<p class="block px-4 py-2  font-bold text-1xl">
-						Bonus <span class="block">R <%= @user.bonus%> </span>
+					<p class="px-4 py-2  font-bold text-1xl">
+						Referred Number  
+            <span class="block"><%= @user.referred_num%> </span>
 					</p>
 				</li>
 		</ul>
@@ -48,6 +49,9 @@
     </div>
      <div class="py-1" role="none">
       <span class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-500 hover:text-white" role="menuitem" tabindex="-1", id="menu-item-2"><%= link_to "Withdraw", withdraw_path %></span>
+    </div>
+    <div class="py-1" role="none">
+      <span class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-500 hover:text-white" role="menuitem" tabindex="-1", id="menu-item-2"><%= link_to "Buy Coupon", coupon_path %></span>
     </div>
     <div class="py-1" role="none">
       <span class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-500 hover:text-white" role="menuitem" tabindex="-1", id="menu-item-2"><%= button_to "Logout", destroy_user_session_path, method: :delete %></span>

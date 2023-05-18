@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_many :transactions, foreign_key: 'user_id', dependent: :destroy
   attribute :role, :string, default: 'user'
+  attribute :referred_num, :integer, default: 0
   attribute :unique_id, :string, default: SecureRandom.hex(3)
   validates :balance, presence: true, numericality: { allow_decimal: true, greater_than: 0 }, if: -> { role == 'user' }
   validates :firstname, :lastname, :username, :phone_number, presence: true, if: -> { role == 'user' }

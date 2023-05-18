@@ -6,7 +6,7 @@ ruby '3.2.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
-gem 'rufus-scheduler'
+gem 'resque'
 
 gem 'shoulda-matchers', '~> 4.0'
 

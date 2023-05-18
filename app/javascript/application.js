@@ -8,5 +8,3 @@ const menu = document.querySelector('.menu')
 harmbugger.addEventListener('click', () => {
 menu.classList.toggle('hidden')
 })
-
-

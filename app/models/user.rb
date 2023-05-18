@@ -27,4 +27,5 @@ class User < ApplicationRecord
   def generate_referral_link
     Rails.application.routes.url_helpers.new_user_registration_url(ref: unique_id, host: 'localhost:3000')
   end
+
 end

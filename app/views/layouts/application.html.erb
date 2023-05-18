@@ -20,13 +20,6 @@
 
     <script>
         
-        document.querySelectorAll('.message')
-        .forEach(el => {
-        setTimeout(() => {
-        el.style.display = 'none'
-        }, 3000)
-        })
-
         document.querySelectorAll('.section')
         .forEach(el => {
         el.addEventListener('click', (e) => {
@@ -49,7 +42,6 @@
         }
 
         const handleCopyClick = () => {
-        console.log("Hello world")
         copyTextToClipboard(copy.value)
         .then(() => {
         // If successful, update the button text to 'Copied!'
@@ -64,6 +56,13 @@
         console.log(err);
         });
         };
+
+        document.querySelectorAll('.message')
+        .forEach(el => {
+        setTimeout(() => {
+        el.style.display = 'none'
+        }, 3000)
+        })
 
     </script>
   </body>

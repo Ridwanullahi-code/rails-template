@@ -16,8 +16,4 @@ class UserController < ApplicationController
     @user = current_user if current_user.role == 'user'
   end
 
-  def coupon
-    @user = current_user if current_user.role == 'user'
-  end
-
 end

@@ -9,6 +9,7 @@
     
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
   </head>
 
     <body>
@@ -17,5 +18,51 @@
       <p class="message bg-orange-300 text-white text-center"><%= alert %></p>
       <%= yield %>
     </main>
+
+    <script>
+      document.querySelectorAll('.message')
+      .forEach(el => {
+      setTimeout(() => {
+      el.style.display = 'none'
+      }, 3000)
+      });
+
+      document.querySelectorAll('.section')
+      .forEach(el => {
+      el.addEventListener('click', (e) => {
+      const answer = e.currentTarget.children[2]
+      if (e.target.classList.contains('question')) {
+      answer.classList.toggle('hidden');
+      }
+      })
+      });
+
+      const copyButton = document.querySelector(".copy-button");
+      const copy = document.querySelector(".referral-link");
+      // This is the function we wrote earlier
+      async function copyTextToClipboard(text) {
+      if ("clipboard" in navigator) {
+      return await navigator.clipboard.writeText(text);
+      } else {
+      return document.execCommand("copy", true, text);
+      }
+      }
+
+      const handleCopyClick = () => {
+      copyTextToClipboard(copy.value)
+      .then(() => {
+      // If successful, update the button text to 'Copied!'
+      copyButton.innerHTML = "Copied!";
+
+      // Reset the button text to 'Copy link' after a delay
+      setTimeout(() => {
+      copyButton.innerHTML = "Copy link";
+      }, 1500);
+      })
+      .catch((err) => {
+      console.log(err);
+      });
+      };
+    </script>
   </body>
 </html>

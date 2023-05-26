@@ -14,5 +14,4 @@ Rails.application.routes.draw do
   get 'deposit' => 'user#deposit', :as => 'deposit'
   get 'withdraw' => 'user#withdraw', :as => 'withdraw'
   get 'new_user_referral' => 'user#referral', :as => 'new_user_referral'
-  get 'buy_coupon' => 'user#coupon', :as => 'coupon'
 end
